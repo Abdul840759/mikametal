@@ -1,11 +1,11 @@
-import { company, services } from '../src/config/company'
+declare const process: { env: Record<string, string | undefined> }
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string }
 
 const companyInfo = [
-  `${company.name} is a steel construction and metal works company based in Jimeta, Adamawa State, Nigeria.`,
-  `Address: ${company.address}. Phone: ${company.phone}. WhatsApp: ${company.whatsapp}. Email: ${company.email}.`,
-  `Services listed on the website: ${services.map(service => service.title).join('; ')}.`,
+  'MIKAMETAL is a steel construction and metal works company based in Jimeta, Adamawa State, Nigeria.',
+  'Address: KM 7 opposite Gesse Dadò Farms, Numan Road, Jimeta, Yola North LGA, Adamawa State. Phone: +234 803 618 9041. WhatsApp: 2348036189041. Email: talk2mukaila2014@gmail.com.',
+  'Services listed on the website: Roofing & Structural Steel; Steel Buildings & Halls; Gates, Doors & Security Grilles; Canopies, Carports & Station Structures; Tanker, Trailer & Tank Fabrication; Water Towers & Custom Metal Works.',
   `The company website has a projects gallery. For a quote, ask the visitor to describe the work and direct them to the Contact page, WhatsApp, or phone.`,
 ].join('\n')
 
