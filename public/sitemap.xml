@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: replace PRODUCTION_DOMAIN and publish when the domain is confirmed -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://PRODUCTION_DOMAIN/</loc></url><url><loc>https://PRODUCTION_DOMAIN/about</loc></url><url><loc>https://PRODUCTION_DOMAIN/services</loc></url><url><loc>https://PRODUCTION_DOMAIN/projects</loc></url><url><loc>https://PRODUCTION_DOMAIN/contact</loc></url>
+</urlset>

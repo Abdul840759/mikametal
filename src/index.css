@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@theme{--color-royal:#C2410C;--color-navy:#231A15;--color-navy-2:#3A2A20;--color-steel:#F6F1EA;--color-steel-2:#8B97A5;--color-ink:#1B2430;--color-orange:#FF7A1A;
+--font-head:Manrope,system-ui,sans-serif;--font-body:Inter,system-ui,sans-serif;}
+html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--color-ink);overflow-x:hidden}
+h1,h2,h3{font-family:var(--font-head);letter-spacing:-0.02em}
+:focus-visible{outline:3px solid var(--color-orange);outline-offset:2px}
+.grid-lines{background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:48px 48px}
+.mika-avatar{display:block;width:100%;height:100%;border-radius:50%}
+.mika-avatar-wrap{position:relative;display:block;width:100%;height:100%;border:2px solid #fff;border-radius:50%;background:radial-gradient(circle at 38% 34%,#ffd267 0,#ff9b21 48%,#eb6208 78%,#9c3508 100%);box-shadow:0 10px 25px #2b160f55,inset 0 2px 5px #fff9, inset 0 -5px 10px #9c350866;transform-style:preserve-3d}
+.mika-character{position:relative;display:block;width:100%;height:100%;overflow:hidden;border-radius:50%;background:radial-gradient(ellipse at 50% 42%,#ffbf49 0,#ff9a1e 57%,#f27a0c 75%,#bd4708 100%);box-shadow:inset 0 0 0 2px #ffe29a,inset 0 0 0 5px #ff9b12,inset 0 -9px 15px #9b360966;isolation:isolate}
+.mika-3d-scene{width:100%;height:100%;overflow:hidden}
+.mika-3d-scene canvas{position:relative;z-index:1;display:block;width:100%;height:100%}
+.mika-mascot-image{display:block;width:100%;height:100%;object-fit:contain}
+.mika-hair{position:absolute;z-index:4;left:24%;top:0;width:59%;height:48%;border-radius:48% 50% 38% 35%;background:repeating-linear-gradient(145deg,#100d12 0 5px,#2b1820 6px 10px,#4a2430 11px 13px,#140f14 14px 18px);box-shadow:inset 2px 3px 5px #b05d5577,0 4px 5px #20101899;transform:rotate(-7deg)}
+.mika-hair::before{content:"";position:absolute;left:-5%;top:27%;width:37%;height:32%;border-radius:50%;background:repeating-linear-gradient(135deg,#150e13 0 5px,#56303a 6px 10px,#170e13 11px 15px);box-shadow:inset 2px 2px 3px #b46b6388}
+.mika-hair i{position:absolute;top:11%;width:10%;height:80%;border-radius:99px;background:repeating-linear-gradient(170deg,#1c1118 0 5px,#56303a 6px 9px,#180f15 10px 14px);box-shadow:inset 1px 1px 2px #e0927b88,1px 2px 3px #140c10;transform:rotate(24deg)}
+.mika-hair i:nth-child(1){left:19%;height:85%}.mika-hair i:nth-child(2){left:34%;top:3%;height:94%}.mika-hair i:nth-child(3){left:49%;top:0;height:91%}.mika-hair i:nth-child(4){left:64%;top:8%;height:86%}.mika-hair i:nth-child(5){left:77%;top:21%;height:72%}
+.mika-face{position:absolute;z-index:3;left:29%;top:24%;width:43%;height:47%;border-radius:45% 47% 48% 48%;background:radial-gradient(ellipse at 34% 25%,#ffbd82,#e78354 55%,#b95236 100%);box-shadow:inset 3px 3px 5px #ffe0a966,inset -4px -3px 6px #85302077,0 4px 8px #6f281d66;animation:mika-head-turn 6s ease-in-out infinite}
+.mika-face::before{content:"";position:absolute;left:5%;top:-10%;width:89%;height:28%;border-radius:60% 48% 20% 30%;background:linear-gradient(170deg,#140d12,#311720 65%,#171017);box-shadow:inset 1px 2px 2px #b5636177}
+.mika-brow{position:absolute;top:32%;width:25%;height:9%;border-top:3px solid #45201b;border-radius:50%;filter:drop-shadow(0 1px 0 #ffc28a)}.mika-brow-left{left:8%;transform:rotate(-9deg)}.mika-brow-right{right:8%;transform:rotate(10deg)}
+.mika-eye{position:absolute;top:41%;width:25%;height:17%;border-radius:50%;background:linear-gradient(#fff,#ffefdf);box-shadow:0 1px 2px #66251c;overflow:hidden}.mika-eye-left{left:9%}.mika-eye-right{right:9%}.mika-eye b{position:absolute;left:25%;top:-4%;width:54%;height:108%;border-radius:50%;background:radial-gradient(circle at 36% 25%,#fff 0 12%,#22191b 14% 61%,#08090d 65%);animation:mika-look 6s ease-in-out infinite}
+.mika-nose{position:absolute;left:46%;top:57%;width:10%;height:11%;border-radius:50%;background:linear-gradient(100deg,#ba563e,#ffd09a 65%,#c96043);box-shadow:1px 2px 2px #923a2a}
+.mika-smile{position:absolute;left:31%;top:74%;width:39%;height:15%;border-radius:3px 3px 48% 48%;background:linear-gradient(#67221c 0 25%,#fff7ea 27% 63%,#f9d5ae 65% 70%,#a13c2c 73%);box-shadow:0 2px 2px #9e382b,0 0 0 1px #b9513b;transform:rotate(4deg)}
+.mika-cheek{position:absolute;top:63%;width:22%;height:8%;border-radius:50%;background:#fa8a7199;filter:blur(3px)}.mika-cheek-left{left:0}.mika-cheek-right{right:0}
+.mika-headset{position:absolute;z-index:5;left:15%;top:9%;width:73%;height:62%;border:5px solid #242127;border-bottom-color:transparent;border-radius:50% 50% 0 0;filter:drop-shadow(0 2px 1px #fff9)}
+.mika-cup{position:absolute;top:40%;width:24%;height:35%;border:3px solid #ff8a1d;border-radius:12px;background:linear-gradient(90deg,#121116,#4a424a 48%,#16141a);box-shadow:0 2px 4px #170d0c;display:grid;place-items:center;color:#ff8a1d;font:bold 13px system-ui;font-style:normal}.mika-cup-left{left:-13%}.mika-cup-right{right:-13%}
+.mika-mic{position:absolute;right:-15%;bottom:-3%;width:34%;height:25%;border-right:4px solid #28242b;border-bottom:4px solid #28242b;border-radius:0 0 70% 0;transform:rotate(-7deg)}.mika-mic::after{content:"";position:absolute;right:-6px;bottom:-5px;width:11px;height:8px;border-radius:8px;background:#ff9a18;box-shadow:0 0 7px #ffde73}
+.mika-neck{position:absolute;z-index:2;left:44%;top:64%;width:19%;height:21%;background:linear-gradient(90deg,#b85035,#f6a16c 48%,#b85035)}
+.mika-shirt{position:absolute;z-index:2;left:5%;right:5%;bottom:-12%;height:42%;border-radius:50% 50% 0 0;background:linear-gradient(105deg,#18151b,#343039 45%,#17141a);box-shadow:inset 0 4px 0 #ff8615,0 0 0 1px #151219}.mika-shirt b{position:absolute;right:16%;top:22%;color:#ff8b18;font:900 13px system-ui;transform:rotate(-8deg)}.mika-shirt small{position:absolute;right:7%;top:44%;font:700 5px system-ui;color:#fff;letter-spacing:.3px}
+.mika-collar{position:absolute;left:31%;top:-2%;width:39%;height:45%;background:linear-gradient(90deg,#ff7b13,#ffbb3e,#ff7610);clip-path:polygon(0 0,50% 40%,100% 0,78% 100%,50% 63%,22% 100%);filter:drop-shadow(0 1px 2px #111)}
+.mika-sheen{position:absolute;z-index:6;inset:2px;border-radius:50%;pointer-events:none;background:linear-gradient(125deg,#fff7 0 8%,transparent 24% 74%,#fff2 93%);mix-blend-mode:screen}
+.mika-chat-avatar{display:block;width:44px;height:44px;border-radius:50%;overflow:hidden;box-shadow:0 3px 10px #0005}
+.mika-launcher-button{animation:none;isolation:isolate}
+.mika-launcher-button::before{content:none}
+.mika-launcher-button .mika-avatar-wrap{width:78px;height:100px;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none;overflow:visible}
+.mika-launcher-button .mika-character{overflow:visible;border-radius:0;background:transparent;box-shadow:none}
+.mika-launcher-hint{margin-right:7px;animation:mika-hint-in .35s ease-out both}
+.mika-launcher-card{width:220px;padding:13px;border:1px solid rgba(255,122,26,.2);border-radius:18px;background:linear-gradient(145deg,#fff 0%,#fffaf4 100%);color:#231a15;text-align:left;box-shadow:0 12px 32px #20130f26,0 3px 8px #20130f14;backdrop-filter:blur(14px)}
+.mika-launcher-card-head{display:flex;align-items:center;gap:10px}
+.mika-launcher-card-icon{display:grid;width:38px;height:38px;flex:0 0 auto;place-items:center;border:1px solid #ffb36c66;border-radius:13px;background:linear-gradient(145deg,#fff2df,#ffe5c5);color:#c94d0b}
+.mika-launcher-card-title{font-size:13px;font-weight:800;line-height:1.2;letter-spacing:-.01em}
+.mika-launcher-card-status{display:flex;align-items:center;gap:5px;margin-top:3px;color:#786b62;font-size:10px;font-weight:600;line-height:1.2}
+.mika-launcher-card-status span{width:6px;height:6px;border-radius:50%;background:#20b45a;box-shadow:0 0 0 3px #20b45a20}
+.mika-launcher-cta{display:flex;width:100%;min-height:38px;align-items:center;justify-content:space-between;margin-top:10px;padding:0 12px;border-radius:11px;background:#231a15;color:#fff;font-size:11px;font-weight:750;transition:background .18s,transform .18s}
+.mika-launcher-cta:hover{transform:translateY(-1px);background:#3b281e}
+.mika-launcher-cta svg{color:#ff9a3c}
+.mika-status-dot{box-shadow:0 0 0 2px rgba(35,26,21,.18)}
+@keyframes mika-avatar-ring{0%{transform:scale(.88);opacity:.72}75%,100%{transform:scale(1.32);opacity:0}}
+@keyframes mika-hint-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes mika-head-turn{0%,35%,100%{transform:rotate(0)}42%,52%{transform:rotate(2deg)}60%,70%{transform:rotate(-1deg)}}
+@keyframes mika-look{0%,30%,100%{transform:translateX(0)}40%,60%{transform:translateX(3px)}}
+@media(max-width:360px){
+  .site-header-content{height:54px;padding-left:12px;padding-right:12px}
+  .site-header-content>div:last-child{gap:6px}
+  .site-header-content>div:last-child>a{width:38px;height:38px}
+  .site-bottom-nav-list{padding-left:2px;padding-right:2px}
+  .site-nav-link{min-height:48px;gap:2px;font-size:9px}
+  .site-nav-icon{height:26px;width:34px}
+}
+@media(max-width:240px){
+  #main>section{padding-top:14px;padding-bottom:14px}
+  #main>section:first-child{padding-top:58px;padding-bottom:14px;min-height:68svh}
+  #main h1{font-size:1.15rem;line-height:1.15}
+  #main h2{font-size:1rem;line-height:1.2}
+  #main h3{font-size:.85rem;line-height:1.25}
+  #main p,#main li{font-size:.7rem;line-height:1.45}
+  #main .max-w-6xl{padding-left:8px;padding-right:8px}
+  #main .max-w-3xl,#main .max-w-2xl,#main .max-w-xl{max-width:100%}
+  #main .mt-10{margin-top:12px}
+  #main .mt-8{margin-top:10px}
+  #main .mt-6{margin-top:8px}
+  #main .mt-4{margin-top:6px}
+  #main .gap-10{gap:12px}
+  #main .gap-8{gap:10px}
+  #main .gap-6{gap:8px}
+  #main .gap-4{gap:6px}
+  #main .grid-cols-2{grid-template-columns:minmax(0,1fr)}
+  #main .col-span-2{grid-column:span 1}
+  #main .p-6{padding:8px}
+  #main .p-5{padding:7px}
+  #main .text-3xl{font-size:1rem;line-height:1.2}
+  #main .text-lg{font-size:.75rem;line-height:1.35}
+  #main .text-sm{font-size:.65rem;line-height:1.4}
+  #main input,#main select,#main textarea{min-width:0;padding:6px;font-size:11px}
+  #main .site-button{min-height:32px;padding:6px 9px;font-size:10px;line-height:1.2}
+  .site-header-content{height:46px;padding-left:8px;padding-right:8px}
+  .site-header-content>div:last-child{display:none}
+  .site-logo{gap:5px}
+  .site-logo-mark{width:25px;height:25px}
+  .site-logo-wordmark{font-size:11px;letter-spacing:0}
+  .site-bottom-nav{padding-bottom:env(safe-area-inset-bottom)}
+  .site-bottom-nav-list{padding:0}
+  .site-nav-link{min-height:40px;gap:1px;font-size:6px;line-height:1}
+  .site-nav-icon{height:19px;width:24px;border-radius:9999px}
+  .site-nav-icon svg{width:13px;height:13px}
+  .site-nav-label{display:none}
+  footer{padding-bottom:44px!important}
+  footer .py-14{padding-top:14px;padding-bottom:14px}
+  footer .py-5{padding-top:8px;padding-bottom:8px}
+  .mika-launcher{right:8px;bottom:68px;gap:4px}
+  .mika-launcher-card{width:194px;padding:10px}
+  .mika-launcher-button{width:68px;height:88px}
+  .mika-launcher-button .mika-avatar-wrap{width:66px;height:84px}
+  .mika-chat-panel{width:calc(100vw - 8px);height:calc(100svh - 8px);border-radius:10px}
+  .mika-chat-header{padding:6px 8px}
+  .mika-chat-header>div{gap:6px}
+  .mika-chat-avatar{width:34px;height:34px}
+  .mika-chat-header h2{font-size:13px}
+  .mika-chat-subtitle{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}

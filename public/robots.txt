@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# TODO: add "Sitemap: https://<production-domain>/sitemap.xml" once the domain is confirmed
