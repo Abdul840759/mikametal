@@ -59,12 +59,25 @@ export default function ChatWidget() {
         body: JSON.stringify({ messages: next.slice(1).slice(-12).map(({ role, content }) => ({ role, content })) }),
       })
       if (!response.ok) {
-        const data = await response.json()
-        throw new Error(data.error || 'MIKA could not reply right now. Please try again.')
+        let message = 'MIKA is temporarily unavailable. Please try again in a moment.'
+        try {
+          const data = await response.json()
+          if (typeof data.error === 'string') message = data.error
+        } catch {
+          // Vercel may return a plain-text platform error instead of JSON.
+        }
+        throw new Error(message)
       }
       if (!response.body || !response.headers.get('content-type')?.includes('text/event-stream')) {
-        const data = await response.json()
-        setMessages(current => [...current, { role: 'assistant', content: data.reply }])
+        let data: { reply?: unknown }
+        try {
+          data = await response.json()
+        } catch {
+          throw new Error('MIKA is temporarily unavailable. Please try again in a moment.')
+        }
+        const reply = data.reply
+        if (typeof reply !== 'string') throw new Error('MIKA could not reply right now. Please try again.')
+        setMessages(current => [...current, { role: 'assistant', content: reply }])
       } else {
         setMessages(current => [...current, { role: 'assistant', content: '' }])
         const reader = response.body.getReader()
