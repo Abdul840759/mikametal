@@ -148,7 +148,7 @@ export default function ChatWidget() {
         {showLauncherCard && <motion.div key="launcher-card" initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} transition={{ duration: .18 }} className="mika-launcher-card">
           <div className="mika-launcher-card-head">
             <span className="mika-launcher-card-icon"><MessageCircle size={17} /></span>
-            <div><p className="mika-launcher-card-title">MIKA is here</p><p className="mika-launcher-card-status"><span />Online · ready to help</p></div>
+            <div><p className="mika-launcher-card-title">MIKA AI is here</p><p className="mika-launcher-card-status"><span />Online · ready to help</p></div>
           </div>
           <button type="button" onClick={() => setOpen(true)} className="mika-launcher-cta">Chat with MIKA AI <ArrowUpRight size={16} /></button>
         </motion.div>}
