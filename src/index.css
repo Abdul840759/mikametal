@@ -53,9 +53,10 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-0.02em}
   .site-header-content{height:54px;padding-left:12px;padding-right:12px}
   .site-header-content>div:last-child{gap:6px}
   .site-header-content>div:last-child>a{width:38px;height:38px}
+  .site-bottom-nav{padding-left:8px;padding-right:8px}
   .site-bottom-nav-list{padding-left:2px;padding-right:2px}
-  .site-nav-link{min-height:48px;gap:2px;font-size:9px}
-  .site-nav-icon{height:26px;width:34px}
+  .site-nav-link{min-height:52px;gap:3px;font-size:9px}
+  .site-nav-icon{height:25px;width:32px}
 }
 @media(max-width:240px){
   #main>section{padding-top:14px;padding-bottom:14px}
@@ -88,16 +89,15 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-0.02em}
   .site-logo{gap:5px}
   .site-logo-mark{width:25px;height:25px}
   .site-logo-wordmark{font-size:11px;letter-spacing:0}
-  .site-bottom-nav{padding-bottom:env(safe-area-inset-bottom)}
+  .site-bottom-nav{padding-bottom:max(env(safe-area-inset-bottom),10px)}
   .site-bottom-nav-list{padding:0}
-  .site-nav-link{min-height:40px;gap:1px;font-size:6px;line-height:1}
-  .site-nav-icon{height:19px;width:24px;border-radius:9999px}
-  .site-nav-icon svg{width:13px;height:13px}
-  .site-nav-label{display:none}
-  footer{padding-bottom:44px!important}
+  .site-nav-link{min-height:48px;gap:2px;font-size:8px;line-height:1}
+  .site-nav-icon{height:21px;width:26px;border-radius:9999px}
+  .site-nav-icon svg{width:15px;height:15px}
+  footer{padding-bottom:76px!important}
   footer .py-14{padding-top:14px;padding-bottom:14px}
   footer .py-5{padding-top:8px;padding-bottom:8px}
-  .mika-launcher{right:8px;bottom:68px;gap:4px}
+  .mika-launcher{right:8px;bottom:76px;gap:4px}
   .mika-launcher-card{width:194px;padding:10px}
   .mika-launcher-button{width:68px;height:88px}
   .mika-launcher-button .mika-avatar-wrap{width:66px;height:84px}
