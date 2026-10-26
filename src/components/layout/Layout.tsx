@@ -25,8 +25,8 @@ function Header() {
 function BottomNav() {
   return (
     <nav aria-label="Primary" className="site-bottom-nav fixed inset-x-0 bottom-0 z-50 px-3 pb-[max(env(safe-area-inset-bottom),12px)] lg:hidden">
-      <ul className="site-bottom-nav-list mx-auto flex max-w-md items-stretch justify-around rounded-full border border-white/15 bg-[#231A15]/95 px-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.32)] backdrop-blur-xl">{tabs.map(({ to, label, I, cta }) => (
-        <li key={to} className="flex-1"><NavLink to={to} end={to === '/'} aria-label={label} className={({ isActive }) => `site-nav-link flex min-h-14 flex-col items-center justify-center gap-1 text-[11px] font-semibold ${cta ? 'text-orange' : isActive ? 'text-white' : 'text-white/55'}`}>{({ isActive }) => (<><span className={`site-nav-icon grid h-8 w-12 place-items-center rounded-full ${cta ? 'bg-orange text-[#1A120D]' : isActive ? 'bg-royal text-white' : ''}`}><I size={20} aria-hidden="true" /></span><span className="site-nav-label">{label}</span></>)}</NavLink></li>))}</ul>
+      <ul className="site-bottom-nav-list mx-auto flex max-w-md items-stretch justify-around">{tabs.map(({ to, label, I, cta }) => (
+        <li key={to} className="flex-1"><NavLink to={to} end={to === '/'} aria-label={label} className={({ isActive }) => `site-nav-link flex flex-col items-center justify-center font-semibold ${cta ? 'text-orange' : isActive ? 'text-white' : 'text-white/55'}`}>{({ isActive }) => (<><span className={`site-nav-icon grid place-items-center ${cta ? 'site-nav-cta' : isActive ? 'site-nav-active' : ''}`}><I aria-hidden="true" /></span><span className="site-nav-label">{label}</span></>)}</NavLink></li>))}</ul>
     </nav>)
 }
 function Footer() {
