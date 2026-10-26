@@ -45,6 +45,16 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-0.02em}
 .mika-launcher-cta:hover{transform:translateY(-1px);background:#3b281e}
 .mika-launcher-cta svg{color:#ff9a3c}
 .mika-status-dot{box-shadow:0 0 0 2px rgba(35,26,21,.18)}
+@media(max-width:1023px){
+  :root{--mobile-nav-clearance:calc(76px + env(safe-area-inset-bottom, 0px))}
+  .site-bottom-nav{padding-left:16px;padding-right:16px;padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 12px)}
+  .site-bottom-nav-list{min-height:60px;padding:4px 8px;border-color:rgba(255,255,255,.16);background:rgba(35,26,21,.97);box-shadow:0 8px 28px rgba(0,0,0,.3),0 1px 0 rgba(255,255,255,.08) inset}
+  .site-nav-link{min-height:52px;gap:3px;font-size:10px;line-height:1.1}
+  .site-nav-icon{height:27px;width:38px}
+  #main{padding-bottom:var(--mobile-nav-clearance)}
+  .site-footer{padding-bottom:calc(var(--mobile-nav-clearance) + 16px)}
+  .mika-launcher{bottom:calc(var(--mobile-nav-clearance) + 8px);right:16px}
+}
 @keyframes mika-avatar-ring{0%{transform:scale(.88);opacity:.72}75%,100%{transform:scale(1.32);opacity:0}}
 @keyframes mika-hint-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 @keyframes mika-head-turn{0%,35%,100%{transform:rotate(0)}42%,52%{transform:rotate(2deg)}60%,70%{transform:rotate(-1deg)}}
@@ -89,15 +99,15 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-0.02em}
   .site-logo{gap:5px}
   .site-logo-mark{width:25px;height:25px}
   .site-logo-wordmark{font-size:11px;letter-spacing:0}
-  .site-bottom-nav{padding-bottom:max(env(safe-area-inset-bottom),10px)}
+  .site-bottom-nav{padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 12px)}
   .site-bottom-nav-list{padding:0}
   .site-nav-link{min-height:48px;gap:2px;font-size:8px;line-height:1}
   .site-nav-icon{height:21px;width:26px;border-radius:9999px}
   .site-nav-icon svg{width:15px;height:15px}
-  footer{padding-bottom:76px!important}
+  footer{padding-bottom:calc(var(--mobile-nav-clearance, 76px) + 16px)!important}
   footer .py-14{padding-top:14px;padding-bottom:14px}
   footer .py-5{padding-top:8px;padding-bottom:8px}
-  .mika-launcher{right:8px;bottom:76px;gap:4px}
+  .mika-launcher{right:8px;bottom:calc(var(--mobile-nav-clearance, 76px) + 8px);gap:4px}
   .mika-launcher-card{width:194px;padding:10px}
   .mika-launcher-button{width:68px;height:88px}
   .mika-launcher-button .mika-avatar-wrap{width:66px;height:84px}

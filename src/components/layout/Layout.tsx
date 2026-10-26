@@ -32,7 +32,7 @@ function BottomNav() {
 function Footer() {
   const wa = waLink()
   return (
-    <footer className="bg-navy pb-20 text-white/80 lg:pb-0"><Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="site-footer bg-navy pb-20 text-white/80 lg:pb-0"><Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
       <div><Logo /><p className="mt-4 text-sm">{company.description}</p></div>
       <div><h2 className="font-head font-bold text-white">Navigate</h2><ul className="mt-3 space-y-2 text-sm">{nav.map(n => <li key={n.to}><Link className="hover:text-white" to={n.to}>{n.label}</Link></li>)}</ul></div>
       <div><h2 className="font-head font-bold text-white">Services</h2><ul className="mt-3 space-y-2 text-sm">{services.map(s => <li key={s.slug}><Link className="hover:text-white" to={`/services#${s.slug}`}>{s.title}</Link></li>)}</ul></div>
