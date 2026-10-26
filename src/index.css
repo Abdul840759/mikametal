@@ -48,13 +48,13 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-0.02em}
 @media(max-width:1023px){
   :root{--mobile-nav-height:74px;--mobile-nav-clearance:calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px) + 18px)}
   .site-bottom-nav{padding-left:clamp(10px,4vw,24px);padding-right:clamp(10px,4vw,24px);padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 10px);pointer-events:none}
-  .site-bottom-nav-list{width:min(100%,440px);min-height:58px;padding:4px;border:1px solid rgba(255,255,255,.13);border-radius:999px;background:linear-gradient(145deg,rgba(45,34,28,.96),rgba(25,19,16,.97));box-shadow:0 12px 34px rgba(15,10,8,.3),0 1px 0 rgba(255,255,255,.09) inset;backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);pointer-events:auto}
-  .site-nav-link{position:relative;min-width:0;min-height:48px;gap:3px;border-radius:999px;font-size:clamp(9px,2.7vw,11px);line-height:1.1;transition:color .18s ease,background-color .18s ease}
+  .site-bottom-nav-list{width:min(100%,440px);min-height:58px;padding:4px;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:linear-gradient(145deg,rgba(45,34,28,.96),rgba(25,19,16,.97));box-shadow:0 12px 34px rgba(15,10,8,.3),0 1px 0 rgba(255,255,255,.09) inset;backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);pointer-events:auto}
+  .site-nav-link{position:relative;min-width:0;min-height:48px;gap:3px;border-radius:16px;font-size:clamp(9px,2.7vw,11px);line-height:1.1;transition:color .18s ease,background-color .18s ease}
   .site-nav-icon{width:34px;height:25px;color:inherit;transition:background-color .18s ease,color .18s ease,transform .18s ease}
   .site-nav-icon svg{width:19px;height:19px;stroke-width:1.8}
   .site-nav-active{color:#ff9a3c}
   .site-nav-active::after{position:absolute;bottom:3px;width:4px;height:4px;border-radius:50%;background:#ff9a3c;content:""}
-  .site-nav-cta{width:38px;height:27px;border-radius:999px;background:linear-gradient(135deg,#ff9a3c,#f46a10);color:#24160f;box-shadow:0 3px 10px rgba(255,122,26,.24)}
+  .site-nav-cta{width:38px;height:27px;border-radius:10px;background:linear-gradient(135deg,#ff9a3c,#f46a10);color:#24160f;box-shadow:0 3px 10px rgba(255,122,26,.24)}
   .site-nav-cta svg{width:18px;height:18px;stroke-width:2}
   .site-nav-label{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   #main{padding-bottom:var(--mobile-nav-clearance)}
