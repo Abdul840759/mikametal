@@ -9,7 +9,7 @@ export const company = {
   whatsapp: '2348036189041' as string | null,
   address: 'KM 7 opposite Gesse Dadò Farms, Numan Road, Jimeta, Yola North LGA, Adamawa State' as string | null,
   establishedYear: 2011 as number | null, // CAC business name registration, 14 Nov 2011
-  siteUrl: null as string | null,         // TODO: canonical production URL
+  siteUrl: 'https://www.mikametal.com.ng',
   description: 'MIKAMETAL is a steel construction and metal works company based in Jimeta, Adamawa State, registered with the Corporate Affairs Commission for general contracts and metal works and fabrication.',
   social: { facebook: null, instagram: null, linkedin: null } as Record<string, string | null>,
 }
